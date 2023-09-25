@@ -5,7 +5,7 @@ const cors = require("cors")
 connectToMongo();
 
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000;
 // const mongoDB = "mongodb://127.0.0.1/test1";
 // mongoose.connect(mongoDB, (err) => {
 //     console.log("EROOR OCCURED" + err)
@@ -13,7 +13,7 @@ const port = 5000
 app.use(cors());
 app.use(express.json())
 app.get('/', (req, res) => {
-    return res.json({ msg: "WORKING APi" })
+    return res.json({ msg: "WORKING AP" })
 })
 
 

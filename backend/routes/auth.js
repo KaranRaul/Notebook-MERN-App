@@ -9,6 +9,9 @@ var fetchuser = require('../middleware/fetchuser');
 //ROUTE 1:post "/api/auth/createUser"
 
 const JWT_SEC = "SECREATES$TRING";
+router.get('/', (req, res) => {
+    return res.json({ msg: "WORKING AP" })
+})
 
 router.post('/createUser', [
     body('name').notEmpty(),
