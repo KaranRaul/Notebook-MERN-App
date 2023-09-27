@@ -51,13 +51,10 @@ router.post('/createUser', [
             const authToken = jwt.sign(data, JWT_SEC);
             // console.log(jwtData);
             res.json({ authToken });
-
         }
-
         catch (error) {
             res.status(500).json({ error, errors: "EROOR OCUURED" })
         }
-
     })
 
 
@@ -71,7 +68,6 @@ router.post('/login', [
         if (!errors.isEmpty()) {
             return res.status(400).json({ error: "TRY LOGIN  WITH CORRECT CERDENTIALS" })
         }
-
         try {
             const { email, password } = req.body;
             let user = await User.findOne({ email });
@@ -95,7 +91,7 @@ router.post('/login', [
         }
         catch (error) {
             console.log(error)
-            res.status(500).json({ success, error: "LOGIN ERROR ", error })
+            res.status(500).json({ success, eror: "LOGIN ERROR ", error })
         }
     });
 
@@ -103,8 +99,6 @@ router.post('/login', [
 
 router.post('/getUser', fetchuser,
     async (req, res) => {
-
-
         try {
             const userId = req.user.id;
             const user = await User.findById(userId).select("-passowrd");
