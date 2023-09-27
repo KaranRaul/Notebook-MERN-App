@@ -21,7 +21,8 @@ const Login = () => {
 
         // LOGIN 
         const host = "http://localhost:5000"
-        const url = host + "/api/auth/login";
+        // const url = host + "/api/auth/login";
+        const url = "https://notebook-app-ten.vercel.app/";
 
         const response = await fetch(url, {
             method: 'POST',

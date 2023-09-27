@@ -18,7 +18,7 @@ const SignUp = () => {
 
         // LOGIN 
         const host = "http://localhost:5000"
-        const url = host + "/api/auth/createUser";
+        const url = "mongodb+srv://karanraul02:<password>@cluster0.vmz2mka.mongodb.net/";
 
         const response = await fetch(url, {
             method: 'POST',

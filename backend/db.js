@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // const mongoUri = "mongodb://localhost:27017/test"
 
 const connectToMongo = () => {
-    const mongoDB = "mongodb://127.0.0.1/test";
+    const mongoDB = "mongodb+srv://karanraul02:ajtkXnEw52xxUHmt@cluster0.vmz2mka.mongodb.net/notebook";
     mongoose.connect(mongoDB, (err) => {
         console.log("EROOR OCCURED" + err)
     });
