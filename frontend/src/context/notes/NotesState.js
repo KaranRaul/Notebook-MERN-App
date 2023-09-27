@@ -3,7 +3,8 @@ import noteContext from "./NoteContext";
 import { useState } from "react";
 
 const NoteState = (props) => {
-    const host = "http://localhost:5000"
+    // const host = "http://localhost:5000"
+    const host = "https://notebook-app-ten.vercel.app";
 
     const notesInitial = []
     const [notes, setNotes] = useState(notesInitial);
@@ -29,7 +30,7 @@ const NoteState = (props) => {
     //add a note
     const addNote = async (adNote) => {
         const url = host + "/api/notes/addnotes";
-        const response = await fetch("http://localhost:5000/api/notes/addnotes", {
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

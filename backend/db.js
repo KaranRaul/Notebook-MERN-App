@@ -16,13 +16,13 @@ const connectToMongo = () => {
     // const mongoose = require('mongoose');
 
     // Connect to MongoDB Atlas with updated options
-    const url = 'mongodb+srv://karanraul02:ajtkXnEw52xxUHmt@cluster0.vmz2mka.mongodb.net/notebook';
+    const Mongourl = 'mongodb+srv://karanraul02:ajtkXnEw52xxUHmt@cluster0.vmz2mka.mongodb.net/notebook';
     const options = {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     };
 
-    mongoose.connect(url, options)
+    mongoose.connect(Mongourl, options)
         .then(() => {
             console.log('Connected to MongoDB');
             // Your code to work with MongoDB using Mongoose here

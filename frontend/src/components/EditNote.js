@@ -10,8 +10,9 @@ const EditNote = (props) => {
     const [note, setNote] = useState({ "title": "", "description": "", "tag": "DEF" });
     const handleClick = (e) => {
 
-        // e.preventDefault();
+        e.preventDefault();
         editNote(id, note);
+        // window.location = '/home';
     }
 
     const onChange = (e) => {

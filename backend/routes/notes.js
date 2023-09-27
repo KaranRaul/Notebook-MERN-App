@@ -99,17 +99,16 @@ router.put('/updatenote/:id', fetchuser, async (req, res) => {
         if (note.user.toString() !== req.user.id) {
             return res.status(401).send("Not Allowed");
         }
-        note.
 
-            note = await Note.findOneAndUpdcd.update(
-                { _id: req.params.id },
-                { $set: newNote },
-                { new: true }
-            );
+        note = await Note.findOneAndUpdate(
+            { _id: req.params.id },
+            { $set: newNote },
+            { new: true }
+        );
         res.json(note);
     } catch (error) {
         console.error(' nodem updating note:', error);
-        res.status(500).send({ error, err: "Internal Server Error" });
+        res.status(500).send({ error });
     }
 });
 
